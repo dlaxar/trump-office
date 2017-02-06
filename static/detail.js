@@ -41,7 +41,8 @@
 			let secondsString = (onlySecondsVisible ? '' : ' and ') + cd.secText + ' left';
 			document.querySelector("#cd-s").innerHTML = secondsString;
 
-			// document.querySelector('.bar .label').innerHTML = calcPercentage(SOON.countdownStartTime, SOON.countdownEndTime)+'%';
+			document.querySelector('.bar .label').innerHTML = calcPercentage(SOON.countdownStartTime, SOON.countdownEndTime)+'%';
+			document.querySelector('.bar .fill').style.transform = "translateX(" + calcPercentage(SOON.countdownStartTime, SOON.countdownEndTime)/2 +'%)';
 
 			if (cd.sec == 0 && cd.min == 0 && cd.hrs == 0) {
 				clearInterval(SOON.countdownInterval);
@@ -75,7 +76,7 @@
 		let tDiff = end - start;
 		if (tDiff > 0 && cDiff < tDiff) {
 			p = 100 - (100*(cDiff/tDiff));
-			p = Math.floor(p);
+			p = p.toFixed(2);
 			p = p > 100 ? 100 : p;
 		}
 		return p;

@@ -18,6 +18,10 @@
 	<div class="card body">
 		<p class="cd big">3 years, 11 months, 19 days,  <span id="cd-server" style="display: none;">23 hours and 12 minutes left</span></p>
 		<p class="cd "><span id="cd-h">23 hours,</span> <span id="cd-m">12 minutes</span> <span id="cd-s"> and 9 seconds left</span></p>
+		<div class="bar">
+			<span class="label">0%</span>
+			<span class="fill" style="transform: translateX(0%); animation: progress 126230400s linear 1 forwards;"></span>
+		</div>
 		<p id="end">
 			End date: <span>Tue Jan 26 2021, 10:00:00</span>
 		</p>
@@ -26,8 +30,8 @@
 
 <script>
 	SOON = {
-		countdownStartTime: (new Date()).getTime(),
-		countdownEndTime: 1611162000000
+		countdownStartTime: 1484931600000,
+		countdownEndTime:   1611162000000
 	};
 </script>
 <script src="./detail.js" charset="utf-8"></script>
